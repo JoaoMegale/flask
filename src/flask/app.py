@@ -344,7 +344,7 @@ class Flask(App):
         if mode not in {"r", "rt", "rb"}:
             raise ValueError("Resources can only be opened for reading.")
 
-        return open(os.path.join(self.root_path, resource), mode)
+        return None
 
     def open_instance_resource(self, resource: str, mode: str = "rb") -> t.IO[t.AnyStr]:
         """Opens a resource from the application's instance folder
